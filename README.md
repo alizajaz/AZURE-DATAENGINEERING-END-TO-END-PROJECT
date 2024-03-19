@@ -17,8 +17,7 @@ CREATE DATABASE sales;
 USE sales;
 
 DATABASE NAME: sale
-right click >Table Data Import Wizard >file path>next>next>finish(make sure to put it in (int)
-or  Expand Databases, right-click a database (test in the example below), point to Tasks, and click Import Flat File above Import Data.
+right CLICK>  Expand Databases, right-click a database (test in the example below), point to Tasks, and click Import Flat File above Import Data.
 
 SELECT * FROM sale.pizza_sales;(SelectPizzasale.png)
 "The data needs to be transferred to cloud storage."
