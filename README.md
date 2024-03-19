@@ -1,6 +1,5 @@
 # AZURE-DATAENGINEERING-END-TO-END-PROJECT
-****
-General knowledge****
+
 In Azure Cloud, there are many ways to import data depending upon the source of data, size of data, specific service you prefer to use, existing infrastructure, specific requirements, and preferences.
 
 CREATE DATABASE IN My SQL WorkBench
