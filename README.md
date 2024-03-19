@@ -1,5 +1,15 @@
 # AZURE-DATAENGINEERING-END-TO-END-PROJECT
 
+The tools that are covered in this project are,
+
+1. SQL server migration 
+2. Azure Data Factory
+3. Azure Data Lake Storage Gen2
+4. Azure Databricks
+5. PYSPARK
+6. SPARK SQL
+7. Microsoft Power BI
+
 In Azure Cloud, there are many ways to import data depending upon the source of data, size of data, specific service you prefer to use, existing infrastructure, specific requirements, and preferences.
 
 CREATE DATABASE IN My SQL WorkBench
