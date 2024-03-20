@@ -11,8 +11,9 @@ The tools that are covered in this project are,
 7. Microsoft Power BI
 
 In Azure Cloud, there are many ways to import data depending upon the source of data, size of data, specific service you prefer to use, existing infrastructure, specific requirements, and preferences.
+**Step 1 **
 
-CREATE DATABASE IN My SQL WorkBench
+**CREATE DATABASE IN My SQL WorkBench**
 CREATE DATABASE sales;
 USE sales;
 
@@ -53,14 +54,29 @@ General purpose v2(Azure recommendation)**
 **Archive Tier:** Rarely
 ***************************************************************************************************************************************************************************
 
-
-
+**Step 2**
 
 Go to the Search button in  https://portal.azure.com/#home type storage >click on storage account>click create button 
 Create a storage account
 https://github.com/alizajaz/AZURE-DATA-ENGINEERING-PROJECT/blob/main/AzureStoragewithresourcesstoragename.png
 add resources group if you do not have one>storage account name >Review+Create>deployment process will happen >click on> go to resource>you can view an overview of storage >click on container >click on +> create the container>add name and you can give access to private, public>click create  and once a container is successfully created upload a file.>click on file >upload a file >click on file name>edit>preview
-https://github.com/alizajaz/AZURE-DATA-ENGINEERING-PROJECT/blob/main/Azurestoragecontainerfileupload1.png 
+
+
+**Step 3**
+**Create a Data Factory 
+**
+search data factory >create data factory >fill name,resource group>once deployment is completed go to resource>open Azure Data Factory 
+
+**Step 3**
+**Create a Pipeline
+**
+Open Azure Data Factory >pipelines>pipeline1>copy data 1 >Source>Source dataset>new >choose sql server>new linked service >>Connect via integration runtime*
+>Server name*>Username>Password>create
+
+**You can connect with SQL Server.
+**
+
+
 
 
 
