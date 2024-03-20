@@ -63,11 +63,13 @@ add resources group if you do not have one>storage account name >Review+Create>d
 
 
 **Step 3**
+
 **Create a Data Factory 
 **
 search data factory >create data factory >fill name,resource group>once deployment is completed go to resource>open Azure Data Factory 
 
 **Step 3**
+
 **Create a Pipeline
 **
 Open Azure Data Factory >pipelines>pipeline1>copy data 1 >Source>Source dataset>new >choose sql server>new linked service >>Connect via integration runtime*
@@ -75,6 +77,19 @@ Open Azure Data Factory >pipelines>pipeline1>copy data 1 >Source>Source dataset>
 
 **You can connect with SQL Server.
 **
+Now we have to connect with Azure Bob storage. (store file as a CSV file )
+go to sink >new> azure bob storage>linked list >set properties>file path(I choose output)
+My source and sink are ready >publish >add trigger>trigger now>go to monitor(left round kind of blue logo ) >refresh
+
+This pipeline will transfer SQL  server data to bob storage in Azure Cloud.
+
+go to Home Microsoft Azure> storage account> Data Factory>file >go to container>click on file (my is output)>you can find  dbo.pizza_sales.txt
+
+Databricks
+https://www.databricks.com/try-databricks/thank-you-community-edition
+sign up (enter name and phone number)
+
+
 
 
 
