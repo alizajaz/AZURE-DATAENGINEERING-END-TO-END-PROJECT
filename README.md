@@ -89,6 +89,64 @@ Databricks
 https://www.databricks.com/try-databricks/thank-you-community-edition
 sign up (enter name and phone number)
 
+After that, we going to connect Databricks
+mount data brick to the blob storage 
+compute>create the cluster
+after that mount data bricks to bob storage
+create>notebook>rename notebook file>
+
+dbutils.fs.mount(
+    source="wasbs://<container-name>@storage-account-name>.blob.core.windows.net",
+    mount_point="/mnt/iotdata",
+    extra_configs={"fs.azure.account.key.<storage-account-name>.blob.core.windows.net":dbutils.secrets.get(scope="<scope-name>",key="<key-name>")})
+)
+
+
+for container name: go to the storage account >(storagefir)my storage name>go to container
+change storage-name >access key, copy key, and pass name 
+once the cluster is ready you can run your code
+
+dbutils.fs.mount(
+    source="wasbs://output@storagefir.blob.core.windows.net",
+    mount_point="/mnt/output3",
+    extra_configs={""})
+
+True
+
+
+dbutils.fs.ls("/mnt/output3/")
+Out[9]: [FileInfo(path='dbfs:/mnt/output3/dbo.pizza_sales.txt', name='dbo.pizza_sales.txt', size=9152440, modificationTime=1710963664000)]
+
+
+(We are able to fetch our data successfully )
+
+Now let's create data frame 
+
+display(df)
+
+df.createOrReplaceGlobalTempView("pizza_sales_analysis")
+
+# %sql
+# select * from pizza_sales_analysis
+spark.sql("SELECT * FROM global_temp.pizza_sales_analysis").show()
+%sql 
+select
+
+count(distinct order_id)order_id,
+sum(quantity) quantity,
+date_format(order_date,'MMM') month_name,
+date_format(order_date,'EEEE') day_name,
+hour(order_time) order_time,
+sum(unit_price) unit_price,
+sum(total_price) total_sales,
+pizza_size,
+pizza_category,
+pizza_name
+
+from global_temp.pizza_sales_analysis
+group by 3,4,5,8,9,10
+after that you can download file or connect directly from databricks.
+
 
 
 
